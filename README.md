@@ -12,9 +12,9 @@ I am not an expert on debugging nor on abaqus, but as a regular user I had to co
 
 Basic steps
 
-* Get the compilation command in order to compile your VUMAT in debug mode
+* Get the compilation command in order to compile your VUMAT in debug mode. This stage is not necessary if you do not compile your subroutine manually. However since this is my case, I fugured it could be useful to other people. If you let abaqus compile the library for you, then you can skip ahead to the *attach to your debugger* Section.
 * Compile your VUMAT in debug mode
-* attach your debbuger to the running process
+* Attach your debbuger to the running process
 
 ## Compile your VUMAT
 
