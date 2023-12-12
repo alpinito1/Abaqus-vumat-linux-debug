@@ -158,11 +158,12 @@ Now you can submit your job :
 
 ```bash
 cd /home/user/path/to/your/VUMAT/folder
-abaqus debug -j Job_name -user ./VUMAT.o -double both -interactive -ask_delete OFF -input sim.inp -stop vumat
+abaqus debug -j Job_name -user ./VUMAT.o -double both -interactive -ask_delete OFF \
+-input sim.inp -stop vumat
 ```
 Most likely all those options are not required, but those are the ones I use.
 
-By doing so, your process is submitted and normally you should pause as requested (`sleep(10)`) in you VUMAT. Go to your monitor and seek for the `explicit_dp` process and grab its process ID.
+By doing so, your process is submitted and normally it should pause as requested (`sleep(10)`) in you VUMAT. Go to your monitor and seek for the `explicit_dp` process and grab its process ID.
 
 Finally you should quickly go to your debugger and attach to it (in this case the process ID will be 46709):
 
@@ -170,7 +171,7 @@ Finally you should quickly go to your debugger and attach to it (in this case th
 attach 46709
 ```
 
-Alternatively you can interrupt the execution, add another breakpoint and the continue the execution:
+Alternatively you can interrupt the execution, add another breakpoint and then continue the execution:
 
 ```gdb
 attach 46709
